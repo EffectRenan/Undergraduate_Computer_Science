@@ -1,0 +1,39 @@
+<html>
+    <br>
+    <input id="operand1" type="text" name="operand1" value="">     
+    <select id="select">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input id="operand2" type="text" name="operand2" value="">     
+    <input id="sbumit" type="submit" name="submit" value="Submit" onclick="calc()">     
+
+    <br>
+    <br>
+    <hr/>
+    <br>
+    <p id="contents"></p>
+
+</html>
+
+<script>
+
+    function calc() {
+        fetch('/?' + new URLSearchParams({
+            operand1: operand1.value,
+            operand2: operand2.value,
+            operator: select.options[select.selectedIndex].value
+        }))
+        .then(async function(response) {
+            response.text().then(text => {
+                const data = `${operand1.value} ${select.options[select.selectedIndex].value} ${operand2.value} = ${text}`;
+                contents.insertAdjacentText('beforeend', data);
+                contents.insertAdjacentHTML('beforeend', '<br>');
+            });
+        })
+
+    }
+    
+</script>
