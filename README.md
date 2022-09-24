@@ -1,6 +1,6 @@
 # Computer Science
 
-This repository contains some projects that I made in my undergraduate degree in Computer Science at [Federal University of Santa Catarina (UFSC)](https://ufsc.br/).
+This repository contains some projects that I have made in my undergraduate degree in Computer Science at [Federal University of Santa Catarina (UFSC)](https://ufsc.br/).
 
 ---
 
