@@ -1,5 +1,8 @@
-# Undergrad_computer_science
-Computer Science course @ UFSC
+# Computer Science
+
+This repository contains some projects that I made in my undergraduate degree in Computer Science at [Federal University of Santa Catarina (UFSC)](https://ufsc.br/).
+
+---
 
 [**INE5418 - Distributed Computing**](https://github.com/EffectRenan/Undergrad_computer_science/tree/INE5418)
 
