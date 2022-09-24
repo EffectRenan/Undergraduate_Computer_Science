@@ -1,4 +1,3 @@
-# Undergrad_computer_science
-Computer Science course @ UFSC
+# INE5429 - Computer Security
 
-[**INE5418 - Distributed Computing**](https://github.com/EffectRenan/Undergrad_computer_science/tree/INE5418)
+**Teaching plan [PT-BR]:** [https://planos.inf.ufsc.br/modulos/planos/visualizar.php?id=3763](https://planos.inf.ufsc.br/modulos/planos/visualizar.php?id=3763).
