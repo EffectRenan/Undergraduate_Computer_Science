@@ -1,4 +1,3 @@
-# Undergrad_computer_science
-Computer Science course @ UFSC
+# INE5420 - Computer Graphics
 
-[**INE5418 - Distributed Computing**](https://github.com/EffectRenan/Undergrad_computer_science/tree/INE5418)
+**Teaching plan [PT-BR]:** [https://planos.inf.ufsc.br/modulos/planos/visualizar.php?id=3844](https://planos.inf.ufsc.br/modulos/planos/visualizar.php?id=3844).

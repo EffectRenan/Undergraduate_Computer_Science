@@ -1,0 +1,177 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Player2/Player2.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Player2/Ship.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/items/Coin.tscn" type="PackedScene" id=4]
+[ext_resource path="res://fonts/Ubuntu-Regular.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://scripts/HUD.gd" type="Script" id=10]
+
+[sub_resource type="ProceduralSky" id=8]
+ground_bottom_color = Color( 0.294118, 0.54902, 0.67451, 1 )
+ground_horizon_color = Color( 0.454902, 0.654902, 0.698039, 1 )
+sun_longitude = -36.0
+
+[sub_resource type="Environment" id=9]
+background_mode = 2
+background_sky = SubResource( 8 )
+glow_enabled = true
+glow_intensity = 7.1
+glow_strength = 0.61
+glow_bloom = 0.12
+
+[sub_resource type="DynamicFont" id=10]
+size = 50
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 50
+font_data = ExtResource( 5 )
+
+[node name="Main" type="Spatial"]
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( -0.829081, 0.311429, -0.464368, -0.0172758, 0.815855, 0.577998, 0.558862, 0.487229, -0.671029, 0, 23.9287, 0 )
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 9 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.108732, 11.3677, -19.5293 )
+
+[node name="ship" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7692, 0, 0 )
+
+[node name="Level" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, 0 )
+
+[node name="Coins" type="Spatial" parent="Level"]
+
+[node name="Coin1" type="Spatial" parent="Level/Coins"]
+transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 1, -8 )
+
+[node name="Coin" parent="Level/Coins/Coin1" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.383013, 2.06881, -30 )
+
+[node name="Coin2" type="Spatial" parent="Level/Coins"]
+transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 1, -8 )
+
+[node name="Coin" parent="Level/Coins/Coin2" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.617, 2.06881, -30 )
+
+[node name="Coin3" type="Spatial" parent="Level/Coins"]
+transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 1, -8 )
+
+[node name="Coin" parent="Level/Coins/Coin3" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.617, 2.06881, 46 )
+
+[node name="Coin4" type="Spatial" parent="Level/Coins"]
+transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 1, -8 )
+
+[node name="Coin" parent="Level/Coins/Coin4" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.38301, 2.06881, 42 )
+
+[node name="Coin5" type="Spatial" parent="Level/Coins"]
+transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 1, -8 )
+
+[node name="Coin" parent="Level/Coins/Coin5" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.38301, 2.06881, 74 )
+
+[node name="Coin6" type="Spatial" parent="Level/Coins"]
+transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 1, -8 )
+
+[node name="Coin" parent="Level/Coins/Coin6" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.617, 2.06881, 90 )
+
+[node name="Coin7" type="Spatial" parent="Level/Coins"]
+transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 1, -8 )
+
+[node name="Coin" parent="Level/Coins/Coin7" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.617, 2.06881, 130 )
+
+[node name="Coin8" type="Spatial" parent="Level/Coins"]
+transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 1, -8 )
+
+[node name="Coin" parent="Level/Coins/Coin8" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 31.617, 2.06881, 178 )
+
+[node name="Coin10" type="Spatial" parent="Level/Coins"]
+transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 1, -8 )
+
+[node name="Coin" parent="Level/Coins/Coin10" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20.383, 2.06881, 178 )
+
+[node name="Coin9" type="Spatial" parent="Level/Coins"]
+transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 1, -8 )
+
+[node name="Coin" parent="Level/Coins/Coin9" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.61699, 2.06881, 234 )
+
+[node name="UI" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 10 )
+
+[node name="MarginContainer" type="MarginContainer" parent="UI"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 50
+custom_constants/margin_top = 50
+custom_constants/margin_left = 50
+custom_constants/margin_bottom = 500
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/MarginContainer"]
+margin_left = 50.0
+margin_top = 50.0
+margin_right = 1316.0
+margin_bottom = 268.0
+custom_constants/separation = 10
+alignment = 2
+
+[node name="collected_coins_lbl" type="Label" parent="UI/MarginContainer/HBoxContainer"]
+margin_left = 1091.0
+margin_top = 80.0
+margin_right = 1228.0
+margin_bottom = 137.0
+custom_colors/font_color = Color( 0.956863, 0.956863, 0.694118, 1 )
+custom_fonts/font = SubResource( 10 )
+text = "Coins:"
+
+[node name="coin_count" type="Label" parent="UI/MarginContainer/HBoxContainer"]
+margin_left = 1238.0
+margin_top = 80.0
+margin_right = 1266.0
+margin_bottom = 137.0
+custom_colors/font_color = Color( 0.956863, 0.956863, 0.694118, 1 )
+custom_fonts/font = SubResource( 11 )
+text = "0"
+
+[node name="endgame" type="Label" parent="UI"]
+margin_left = 602.0
+margin_top = 306.0
+margin_right = 902.0
+margin_bottom = 363.0
+custom_colors/font_color = Color( 0.956863, 0.956863, 0.694118, 1 )
+custom_fonts/font = SubResource( 10 )
+text = "Congratulations!"
+
+[connection signal="body_entered" from="Level/Coins/Coin1/Coin" to="Player" method="_on_Coin_body_entered"]
+[connection signal="body_entered" from="Level/Coins/Coin1/Coin" to="Level/Coins/Coin1/Coin" method="_on_Coin_body_entered"]
+[connection signal="body_entered" from="Level/Coins/Coin2/Coin" to="Player" method="_on_Coin_body_entered"]
+[connection signal="body_entered" from="Level/Coins/Coin2/Coin" to="Level/Coins/Coin2/Coin" method="_on_Coin_body_entered"]
+[connection signal="body_entered" from="Level/Coins/Coin3/Coin" to="Player" method="_on_Coin_body_entered"]
+[connection signal="body_entered" from="Level/Coins/Coin3/Coin" to="Level/Coins/Coin3/Coin" method="_on_Coin_body_entered"]
+[connection signal="body_entered" from="Level/Coins/Coin4/Coin" to="Player" method="_on_Coin_body_entered"]
+[connection signal="body_entered" from="Level/Coins/Coin4/Coin" to="Level/Coins/Coin4/Coin" method="_on_Coin_body_entered"]
+[connection signal="body_entered" from="Level/Coins/Coin5/Coin" to="Player" method="_on_Coin_body_entered"]
+[connection signal="body_entered" from="Level/Coins/Coin5/Coin" to="Level/Coins/Coin5/Coin" method="_on_Coin_body_entered"]
+[connection signal="body_entered" from="Level/Coins/Coin6/Coin" to="Player" method="_on_Coin_body_entered"]
+[connection signal="body_entered" from="Level/Coins/Coin6/Coin" to="Level/Coins/Coin6/Coin" method="_on_Coin_body_entered"]
+[connection signal="body_entered" from="Level/Coins/Coin7/Coin" to="Player" method="_on_Coin_body_entered"]
+[connection signal="body_entered" from="Level/Coins/Coin7/Coin" to="Level/Coins/Coin7/Coin" method="_on_Coin_body_entered"]
+[connection signal="body_entered" from="Level/Coins/Coin8/Coin" to="Player" method="_on_Coin_body_entered"]
+[connection signal="body_entered" from="Level/Coins/Coin8/Coin" to="Level/Coins/Coin8/Coin" method="_on_Coin_body_entered"]
+[connection signal="body_entered" from="Level/Coins/Coin10/Coin" to="Player" method="_on_Coin_body_entered"]
+[connection signal="body_entered" from="Level/Coins/Coin10/Coin" to="Level/Coins/Coin10/Coin" method="_on_Coin_body_entered"]
+[connection signal="body_entered" from="Level/Coins/Coin9/Coin" to="Player" method="_on_Coin_body_entered"]
+[connection signal="body_entered" from="Level/Coins/Coin9/Coin" to="Level/Coins/Coin9/Coin" method="_on_Coin_body_entered"]
